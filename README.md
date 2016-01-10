@@ -1,4 +1,4 @@
-# guessing-game
+# Guessing Game
 
 I'm making a guessing game for CodeFellows. Try it out!
 
