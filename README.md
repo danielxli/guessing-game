@@ -1,3 +1,3 @@
 # guessing-game
 
-BITE ME
+I'm making a guessing game for CodeFellows. Try it out!
