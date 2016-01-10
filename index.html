@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Guessing Game</title>
+  </head>
+  <body>
+    <h1>Guessing Game</h1>
+    <p>
+      3 questions for you!
+    </p>
+    <script>
+      var q1 = prompt ("Do I like snacks?")
+      if(q1 === "yes"){
+        console.log("That is correct!");
+      } else if (q1 === "no") {
+        console.log("That is incorrect!");
+      }
+      var q2 = prompt ("Do I wear contacts?")
+      if(q2 === "yes"){
+        console.log("That is correct!");
+      } else if (q2 === "no") {
+        console.log("That is incorrect!");
+      }
+      var q3 = prompt ("Do I have any pets?")
+      if(q3 === "yes"){
+        console.log("That is correct!");
+      } else if (q3 === "no") {
+        console.log("That is incorrect!");
+      }
+      var q4 = prompt ("How many siblings do I have?")
+      if(q4 > 0){
+        console.log("That is too high!");
+      } else if (q4 = 0) {
+        console.log("That is correct!");
+      }
+    </script>
+  </body>
+</html>
