@@ -39,9 +39,9 @@ if(q4 > 25){
 }
 
 alert("Your current score is: " + counter)
-var q5 = prompt("For the last challenge... Guess the number I am thinking... Between 1 and 100")
+var q5 = parseInt(prompt("For the last challenge... Guess the number I am thinking... Between 1 and 100"))
 var answer = Math.floor((Math.random() * 100) + 1);
-while (q5 != answer) {
+while (q5 !== answer) {
   if (q5 > answer) {
     var q5 = prompt("Too high. Guess again!")
   } else if (q5 < answer) {
