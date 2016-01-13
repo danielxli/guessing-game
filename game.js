@@ -3,32 +3,39 @@ var ans2 = document.getElementById('a2');
 var ans3 = document.getElementById('a3');
 var ans4 = document.getElementById('a4');
 var ans5 = document.getElementById('a5');
-
+var counter = 0;
 
 var questions = ["Do I like snacks?", "Do I wear contacts?", "Do I have any pets?", "How old am I?", "For the last challenge... Guess the number I am thinking... Between 1 and 100"];
 var answers = ["yes", "yes", "yes", 25, Math.floor((Math.random() * 100) + 1)];
-
-
-var counter = 0;
+var results = [ans1, ans2, ans3, ans4, ans5];
+var submissions = [];
 
 var userName = prompt("Hey!!!! What\'s your name?");
 var welcomeMessage = document.getElementById('welcome');
 welcomeMessage.textContent = "Hello and welcome to the guessing game, " + userName + "!";
 
+var statusMessage = document.getElementById('status');
+statusMessage.textContent = "Get ready for your first question...";
+
 function game(question, answer) {
   var ques = prompt(question).toLowerCase();
+  submissions.push(ques)
+  console.log(submissions)
 
   if (answer === ques) {
     counter++;
-    alert("That is correct");
+    statusMessage.textContent = "Nice! That is correct"
   } else {
-    alert("That is incorrect");
+    statusMessage.textContent = "Aww... That is incorrect"
   }
 }
 
 for (var i = 0; i < questions.length; i++ ) {
+
   console.log("Here's the answer to question " + (i+1)  + ": " + answers[i]);
   game(questions[i], answers[i]);
+
+  results[i].textContent = "Question " + (i+1) + " was '" + questions[i] + "' The correct answer was '" + answers[i] + ".' You said the answer was '" + submissions[i] + ".'"
 
 }
 
