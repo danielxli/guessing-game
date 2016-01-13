@@ -5,8 +5,20 @@ var ans4 = document.getElementById('a4');
 var ans5 = document.getElementById('a5');
 var counter = 0;
 
-var questions = ["Do I like snacks?", "Do I wear contacts?", "Do I have any pets?", "How old am I?", "For the last challenge... Guess the number I am thinking... Between 1 and 100"];
-var answers = ["yes", "yes", "yes", 25, Math.floor((Math.random() * 100) + 1)];
+var questions = [
+  "Do I like snacks?",
+  "Do I wear contacts?",
+  "Do I have any pets?",
+  "How old am I?",
+  "For the last challenge... Guess the number I am thinking... Between 1 and 100"
+];
+var answers = [
+  ["yes", 'y'],
+  ["yes", 'y'],
+  ["yes", 'y'],
+  [25],
+  [Math.floor((Math.random() * 100) + 1)]
+];
 var results = [ans1, ans2, ans3, ans4, ans5];
 var submissions = [];
 
@@ -20,13 +32,17 @@ statusMessage.textContent = "Get ready for your first question...";
 function game(question, answer) {
   var ques = prompt(question).toLowerCase();
   submissions.push(ques)
-  console.log(submissions)
 
-  if (answer === ques) {
-    counter++;
-    statusMessage.textContent = "Nice! That is correct"
-  } else {
-    statusMessage.textContent = "Aww... That is incorrect"
+  for (var i = 0 ;i < answer.length; i++) {
+    if (answer[i] === ques) {
+      statusMessage.textContent = "Nice! That is correct \n Your score is : " + counter;
+      i = answer.length
+    } else if (i === answer.length - 1 ){
+      statusMessage.textContent = "Aww... That is incorrect \n Your score is : " + counter;
+    } else {
+      counter++;
+    }
+
   }
 }
 
