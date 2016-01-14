@@ -1,8 +1,9 @@
 body {
     background-color: lightgray;
-    font: sans-serif;
+    font-family: arial;
 }
 
 h1 {
     color: darkblue;
+    font-family: arial;
 }
