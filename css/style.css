@@ -1,0 +1,15 @@
+html {
+  font-family: arial;
+}
+
+
+#status {
+  background-color: pink;
+  font-family: monospace;
+
+}
+
+.magic {
+  font-size: 8px;
+  color: gray;
+}
