@@ -14,6 +14,7 @@ var questions = [
   "For the last challenge... Guess the number I am thinking... Between 1 and 100",
   "What are my favourite colours?"
 ];
+
 var answers = [
   ["yes", 'y'],
   ["yes", 'y'],
@@ -41,11 +42,11 @@ function game(question, answer) {
     if (answer[i] === ques || answer[i] === parseInt(ques)) {
       counter++;
       statusMessage.textContent = "Nice! That is correct \n Your score is : " + counter;
+      welcomeMessage.textContent = "";
       i = answer.length
     } else if (i === answer.length - 1 ){
       statusMessage.textContent = "Aww... That is incorrect \n Your score is : " + counter;
     }
-
   }
 }
 
@@ -55,9 +56,7 @@ function display (questionNumber,questionAsked,answerArray,submissionReceived) {
 }
 
 for (var i = 0; i < questions.length; i++ ) {
-
   console.log("Here's the answer to question " + (i+1)  + ": " + answers[i]);
   game(questions[i], answers[i]);
-
   results[i].textContent = display(i+1,questions[i],answers[i],submissions[i])
 }
