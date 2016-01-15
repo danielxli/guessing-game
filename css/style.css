@@ -1,15 +1,32 @@
 html {
   font-family: arial;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h1 {
+  background-color: #006699;
+  color: white;
+  padding: 10px;
 }
 
 
 #status {
-  background-color: pink;
-  font-family: monospace;
+  background-color: #009999;
+  opacity: 1.0;
+  font-family: arial;
+  font-size: 20px;
+  padding: 5px;
+  color: white;
+  letter-spacing: 0.5px;
 
 }
 
 .magic {
   font-size: 8px;
   color: gray;
+}
+
+p {
+  color: #669999;
 }

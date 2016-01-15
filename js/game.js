@@ -6,6 +6,8 @@ var ans5 = document.getElementById('a5');
 var ans6 = document.getElementById('a6');
 var results = [ans1, ans2, ans3, ans4, ans5, ans6];
 
+var introPic = document.getElementById("lobster");
+
 var questions = [
   "Do I like snacks?",
   "Do I wear contacts?",
@@ -39,12 +41,16 @@ function game(question, answer) {
   submissions.push(ques)
 
   for (var i = 0 ;i < answer.length; i++) {
+    if (i > 0) {
+      welcomeMessage.textContent = "";
+    }
     if (answer[i] === ques || answer[i] === parseInt(ques)) {
+      introPic.src = "imgs/happypuppy.jpg";
       counter++;
       statusMessage.textContent = "Nice! That is correct \n Your score is : " + counter;
-      welcomeMessage.textContent = "";
       i = answer.length
     } else if (i === answer.length - 1 ){
+      introPic.src = "imgs/sadpuppy.jpg";
       statusMessage.textContent = "Aww... That is incorrect \n Your score is : " + counter;
     }
   }
