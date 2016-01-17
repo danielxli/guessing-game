@@ -2,5 +2,6 @@
 
 I'm making a guessing game for CodeFellows. Try it out!
 
-**Partner's name**: Sarah Wong
+**contributor names**: Sarah Wong, Megan Walter
 Link to repository: [Github](https://github.com/sarahltwong/guessing-game)
+Link to repository: [Github](https://github.com/meganwalter)
