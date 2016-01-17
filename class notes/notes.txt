@@ -1,0 +1,100 @@
+#Notes from Class 04
+
+document.getElementById("test")
+
+# = link to an id
+
+.textContent
+.innerHTML
+
+Forking.
+  You clone their repository using the URL for their fork to clone down to your computer
+  Then you have their code from your fork
+  Then you can start working
+  1. Fork their repo
+  2. Make a clone
+  3. They sit next to you while you create code
+  4. Put functions into their guessing game
+
+
+#Notes from Class 05
+
+Semantics vs. Style
+Semantic - using HTML tags that have meaning
+
+1. header
+  a. nav menu a
+  b. nav menu b
+  c. nav menu c
+
+2. main content
+  a.
+  b.
+
+html5doctor.com
+
+3 big grouping contents --> 1. Header, 2. Main, 3. Footer
+
+
+
+
+Javascript normally uses IDs
+Classes are normally for CSS
+
+Cascading..
+  from broad to narrow
+
+
+Color
+Font
+
+
+
+
+Fieldset - grouping of form elements
+  - comes with a natural builder
+  - if there is a legend tag, you get a blurb of text on the border
+
+Span - can control things within a <p> tag. Can go anywhere to wrap some snippet of content and target just that to apply JS/css
+
+
+
+
+
+ARRAYS!!!!
+we've been doing...
+
+for (var i = 0; i<arr.length; i++){
+  console.log(arr[i]);
+}
+
+methods for arrays
+
+var arr = Array() -> empty array
+var arr = Array(10) -> array with 10 empty elements
+
+arr.push(4) - adds to end
+arr.pop() -> removes and returns last item of array
+arr.shift() -> removed and returns first item in array
+
+arr.indexOf('whatever') -> will return index of item in array. -1 means not in array
+arr.includes() -> boolean answer to whether something is in an array
+
+arr.splice(a, b) -> remove from array items at indices a and b, inclusive
+
+
+
+Color
+  rgb, rgba
+  hsl
+
+.className
+
+
+in console,  click on styles and the individual color of the picker or the 1px whatever, you can control with arrows
+
+
+Images
+
+document.getElementById('imgOne')
+imgEl.src = ...

@@ -1,40 +1,43 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 
 * {
+  color: rgba(100,100,100,1);
+  background-color: rgb(55,255,55);
 
 }
 
 html {
   font-family:fantasy;
-
 }
 
 h1 {
   background-color: pink;
-
 }
 
 p {
   font-family: 'Lobster', cursive;
 }
 
-#headerOne {
-}
-
 .header, .bacon {
-
 }
 
 .bacon {
-
 }
 
 .list li {
+}
 
+.correct {
+  color: green;
+  border: 1px darkblue;
+  box-shadow: 3px 3px 3px blue;
+}
+
+.incorrect {
+  color: red;
 }
 
 li [hidden] {
-
 }
 
 p:hover {
@@ -42,11 +45,12 @@ p:hover {
 }
 
 li:link {
-
 }
 
 li:visited {
+}
 
+#headerOne {
 }
 
 /**/
