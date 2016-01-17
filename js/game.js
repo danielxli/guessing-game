@@ -18,12 +18,12 @@ var questions = [
 ];
 
 var answers = [
-  ["yes", 'y'],
-  ["yes", 'y'],
-  ["yes", 'y'],
+  ['yes', 'y'],
+  ['yes', 'y'],
+  ['yes', 'y'],
   [25],
   [Math.floor((Math.random() * 100) + 1)],
-  ["blue","mauve","periwinkle"]
+  ['blue', 'mauve', 'periwinkle']
 ];
 
 var submissions = [];
@@ -32,7 +32,7 @@ var questionCounter = 0;
 
 
 var statusMessage = document.getElementById('status');
-statusMessage.textContent = "Hello and welcome to the guessing game! Type your name below:";
+statusMessage.innerHTML ='<p>Hello and welcome to the guessing game!</p> <p>Type your name below:</p>';
 
 function submitName(){
   var userName = document.getElementById('inputBox').value;
@@ -114,3 +114,4 @@ function reset() {
   document.getElementById('inputBox').value = '';
   document.getElementById('submitButton').innerHTML = "Here's my name!"
 }
+document.write('<p class="contributor"> Thanks <a href="https//:github.com/meganwalter">Megan</a> for contributing.</p>');

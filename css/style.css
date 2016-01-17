@@ -2,13 +2,28 @@ html {
   font-family: arial;
   padding-left: 10px;
   padding-right: 10px;
-  width: 500px;
+  width: 600px;
 }
 
 h1 {
   background-color: #006699;
   color: white;
   padding: 10px;
+}
+
+img {
+  padding: 10px;
+
+}
+
+#picture {
+  /*height: 300px;*/
+  width: auto;
+}
+
+section img {
+  width: 65%;
+  margin: 5% 12%;
 }
 
 p {
@@ -25,9 +40,13 @@ p {
   opacity: 1.0;
   font-family: arial;
   font-size: 20px;
-  padding: 5px;
+  padding: 1px;
   color: white;
   letter-spacing: 0.5px;
+}
+
+#status p{
+  color: white;
 }
 
 
@@ -38,4 +57,5 @@ p {
   padding: 20px;
   color: gray;
   letter-spacing: 0.5px;
+  width: 40%;
 }
