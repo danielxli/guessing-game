@@ -7,27 +7,43 @@
 </head>
 
 <body>
+  <div class = 'container'>
 
-    <h1>Guessing Game</h1>
-    <p id = "status"></p>
+    <div id='leftSide'>
 
-    <section id="picture">
-      <img id="lobster" src="imgs/lobster.png" />
+      <h1>Welcome to the Guessing Game!</h1>
 
-    <br />
+      <p class = 'left'>This is Daniel Li's first CodeFellows 201 project. It's a trivia game. To check out the code, take a look at my <a href="https://github.com/danielxli/guessing-game">Github</a>.</p>
+      <p class = 'left'> You should also check out the work of my great contributors!</p>
+        <ul>
+          <li><a href="https://github.com/sarahltwong">Sarah</a></li>
+          <li><a href="https://github.com/meganwalter">Megan</a></li>
+        </ul>
 
-    <input type="text" id="inputBox" />
-    <button id ="submitButton" onclick="submitName()">Here's my name!</button>
-    </section>
+    </div>
 
+    <div id = 'rightSide'>
 
-    <p class = "magic" id = "a0" >Your answer log</p>
-    <p class = "magic" id = "a1" ></p>
-    <p class = "magic" id = "a2" ></p>
-    <p class = "magic" id = "a3" ></p>
-    <p class = "magic" id = "a4" ></p>
-    <p class = "magic" id = "a5" ></p>
-    <p class = "magic" id = "a6" ></p>
+      <p id = "status"></p>
+
+      <section id="picture">
+        <img id="lobster" src="imgs/lobster.png" />
+        <br />
+        <input type="text" id="inputBox" />
+        <button id ="submitButton" onclick="submitName()">Here's my name!</button>
+      </section>
+
+      <p class = "magic" id = "a0" >Your answer log</p>
+      <p class = "magic" id = "a1" ></p>
+      <p class = "magic" id = "a2" ></p>
+      <p class = "magic" id = "a3" ></p>
+      <p class = "magic" id = "a4" ></p>
+      <p class = "magic" id = "a5" ></p>
+      <p class = "magic" id = "a6" ></p>
+
+    </div>
+
+  </div>
 
     <script type="text/javascript" src="js/game.js" ></script>
 
