@@ -32,23 +32,25 @@ var questionCounter = 0;
 
 
 var statusMessage = document.getElementById('status');
-statusMessage.innerHTML ='<p>Hello and welcome to the guessing game!</p> <p>Type your name below:</p>';
+statusMessage.textContent = 'Hello and welcome to the guessing game! Type your name below to get started.';
+statusMessage.className = 'neutral';
 
 function submitName(){
   var userName = document.getElementById('inputBox').value;
-  statusMessage.textContent = "Ok, " + userName + ". Click start game for your first question...";
-  document.getElementById('submitButton').setAttribute("onClick", "javascript: displayQuestion();" );
+  statusMessage.textContent = 'Ok, ' + userName + '. Click start game for your first question...';
+  document.getElementById('submitButton').setAttribute('onClick', 'javascript: displayQuestion();');
   document.getElementById('inputBox').style.display='none';
   document.getElementById('inputBox').value = '';
-  document.getElementById('submitButton').innerHTML = "Start game";
+  document.getElementById('submitButton').innerHTML = 'Start game';
 }
 
 function displayQuestion(){
-  introPic.src = "imgs/waiting.gif";
+  introPic.src = 'imgs/waiting.gif';
   statusMessage.textContent = questions[questionCounter];
+  statusMessage.className = 'neutral';
   document.getElementById('inputBox').style.display='inline';
-  document.getElementById('submitButton').setAttribute("onClick", "javascript: submitAnswer();" );
-  document.getElementById('submitButton').innerHTML = "Submit";
+  document.getElementById('submitButton').setAttribute('onClick', 'javascript: submitAnswer();');
+  document.getElementById('submitButton').innerHTML = 'Submit';
 }
 
 function submitAnswer(){
@@ -57,35 +59,37 @@ function submitAnswer(){
   submissions.push(submission);
 
   if (checker(submission, answers[questionCounter])) {
-    introPic.src = "imgs/happypuppy.jpg";
+    introPic.src = 'imgs/happypuppy.jpg';
     scoreCounter++;
     questionCounter++;
     results[questionCounter-1].textContent = display(questionCounter,questions[questionCounter-1],answers[questionCounter-1],submissions[questionCounter-1]);
-    statusMessage.textContent = "Nice! That is correct!  Your score is: " + scoreCounter + "/" + questionCounter;
+    statusMessage.textContent = 'Nice! That is correct!  Your score is: ' + scoreCounter + '/' + questionCounter;
+    statusMessage.className = 'correct';
   } else {
-    introPic.src = "imgs/sadpuppy.jpg";
+    introPic.src = 'imgs/sadpuppy.jpg';
     questionCounter++;
-    results[questionCounter-1].textContent = display(questionCounter,questions[questionCounter-1],answers[questionCounter-1],submissions[questionCounter-1])
-    statusMessage.textContent = "Aww... That is incorrect... Your score is: " + scoreCounter + "/" + questionCounter;
+    results[questionCounter-1].textContent = display(questionCounter,questions[questionCounter-1],answers[questionCounter-1],submissions[questionCounter-1]);
+    statusMessage.textContent = 'Aww... That is incorrect... Your score is: ' + scoreCounter + '/' + questionCounter;
+    statusMessage.className = 'incorrect';
   }
 
-  document.getElementById('inputBox').value = ''
+  document.getElementById('inputBox').value = '';
   document.getElementById('inputBox').style.display='none';
-  document.getElementById('submitButton').setAttribute("onClick", "javascript: displayQuestion();" );
-  document.getElementById('submitButton').innerHTML = "Next question";
+  document.getElementById('submitButton').setAttribute('onClick', 'javascript: displayQuestion();');
+  document.getElementById('submitButton').innerHTML = 'Next question';
 
   if (questionCounter === questions.length) {
-    statusMessage.textContent = statusMessage.textContent + ". That was the last question, but you can click the button below to play again!";
+    statusMessage.textContent = statusMessage.textContent + '. That was the last question, but you can click the button below to play again!';
     document.getElementById('inputBox').value = ''
     document.getElementById('inputBox').style.display='none';
-    document.getElementById('submitButton').setAttribute("onClick", "javascript: reset();" );
-    document.getElementById('submitButton').innerHTML = "Play Again";
+    document.getElementById('submitButton').setAttribute('onClick', 'javascript: reset();' );
+    document.getElementById('submitButton').innerHTML = 'Play Again';
   }
 
 }
 
 function checker(submission, answerArray) {
-  submission = submission.toLowerCase()
+  submission = submission.toLowerCase();
   for (var i = 0; i < answerArray.length; i++) {
     if (submission === answerArray[i] || parseInt(submission) === answerArray[i]) {
       return true;
@@ -96,8 +100,8 @@ function checker(submission, answerArray) {
 }
 
 function display (questionNumber,questionAsked,answerArray,submissionReceived) {
-  var show = "Question " + questionNumber + " was '" + questionAsked + "' Acceptable answers were: '" + answerArray + ".' You said the answer was '" + submissionReceived + ".'"
-  return show
+  var show = "Question " + questionNumber + " was '" + questionAsked + "' Acceptable answers were: '" + answerArray + ".' You said the answer was '" + submissionReceived + ".'";
+  return show;
 }
 
 function reset() {
@@ -105,13 +109,13 @@ function reset() {
   scoreCounter = 0;
   questionCounter = 0;
   for (var i=0; i<results.length; i++) {
-    results[i].innerHTML = ''
+    results[i].innerHTML = '';
   }
   introPic.src = "imgs/lobster.png";
-  statusMessage.textContent = "Hello and welcome to the guessing game! Type your name below:";
+  statusMessage.textContent = "Hello and welcome to the guessing game! Type your name below to get started.";
   document.getElementById('submitButton').setAttribute("onClick", "javascript: submitName();" );
   document.getElementById('inputBox').style.display='inline';
   document.getElementById('inputBox').value = '';
   document.getElementById('submitButton').innerHTML = "Here's my name!"
+  statusMessage.className = "neutral";
 }
-document.write('<p class="contributor"> Thanks <a href="https//:github.com/meganwalter">Megan</a> for contributing.</p>');
